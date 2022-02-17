@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
@@ -16,7 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 
-public class Main extends Application implements EventHandler<ActionEvent>{
+public class Main extends Application{
 Button button;
 ImageView image;
 	public static void main(String[] args) {
@@ -34,31 +34,22 @@ ImageView image;
 		primaryStage.setWidth(1000);
 		primaryStage.setHeight(600);
 		
-		HBox layout = new HBox();
+		VBox layout = new VBox();
 		buttomPanel buttomPanel = new buttomPanel();
 		MyCanvas canvas = new MyCanvas();
-		
-		button = new Button();
-		button.setText("Rensa");
-		button.setOnAction(this);
-		
-	//buttomPanel.setStyle("-fx-background-color: #bfbab4;");
-		 canvas.setStyle("-fx-background-color: #98d4ed;");
-	
-		
 
 		buttomPanel.setMaxHeight(30);
 		buttomPanel.setMinHeight(30);
 		buttomPanel.setMaxWidth(1000);
 		buttomPanel.setMinWidth(1000);
-		
-		buttomPanel.getChildren().add(button);
+		canvas.setHeight(531);
+		canvas.setWidth(1000);
 
+	
 		layout.getChildren().add(canvas);
 		layout.getChildren().add(buttomPanel);
+	
 
-		
-		
 		
 		Scene mainScene = new Scene(layout);
 		primaryStage.setScene(mainScene);
@@ -71,9 +62,6 @@ ImageView image;
 		
 		
 		primaryStage.show();
-		
-
-
 
 //
 //
@@ -84,13 +72,8 @@ ImageView image;
 		
 		
 	}
-	@Override
-	public void handle(ActionEvent event) {
-	if(event.getSource()==button) {
-		System.out.println("Allt försvinner");
-	}
-		
+	
 	}
 	
 
-}
+

@@ -14,13 +14,19 @@ import javafx.event.EventHandler;
 
 public class buttomPanel extends HBox{
 Button clearButton;
-
 public buttomPanel(){
-setStyle("-fx-background-color: #d498ed;"); 
-//setHeight(100); // Sätter höjden på panelen till 100 pixlar 
-//setWidth(600); // Sätter bredden till 1000 pixlar
+setStyle("-fx-background-color: #9fa3ab"); 
+//setHeight(400); // Sätter höjden på panelen till 100 pixlar 
+//setWidth(899); // Sätter bredden till 1000 pixlar
 
-//getChildren().add(clearButton);
+clearButton = new Button("rensa");
+
+getChildren().add(clearButton);
+
+clearButton.setOnAction(value -> { 
+	//PaintSurface.clear();
+	System.out.println("Vi tryckte på knappen! Det går bra nu!"); 
+});
 }
 }
 
