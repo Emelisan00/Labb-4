@@ -4,8 +4,8 @@ public class MyCanvas extends Canvas {
 
 	public MyCanvas(){
 		
-//		setHeight(400);
-//		setWidth(1000);
+		setHeight(530);
+		setWidth(900);
 		
 		 setOnMouseClicked(event -> {
 		 System.out.println("Ojojoj, vi klicka i Canvas. Tvärtufft!");
